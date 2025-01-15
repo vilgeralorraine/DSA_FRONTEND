@@ -1,0 +1,165 @@
+body{
+    background-image: url(new.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.title{
+    text-align: center;
+}
+
+.label-name{
+    text-align: center;
+}
+.input-name{
+    border-radius: 10px;
+    padding: 10px;
+    margin: 100px;
+    margin-bottom: 10px;
+    box-shadow: 5px 5px 5px hsla(0, 0%, 0%, 0.1);
+}
+.input-message{
+    border-radius: 10px;
+    padding: 10px;
+    margin: 20px;
+    margin-bottom: 10px;
+    box-shadow: 5px 5px 5px hsla(0, 0%, 0%, 0.1);
+}
+.enter-button{
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px hsla(0, 0%, 0%, 0.1);
+}
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7; /* Neutral light grey background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container for the journal form */
+.title {
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #ffffff; /* White background for the container */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow around the container */
+}
+
+/* Header style */
+h1 {
+    color: #333333; /* Dark neutral text */
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+/* Flexbox container for the buttons on the front page */
+.front-page-buttons {
+    display: flex;
+    justify-content: center; /* Horizontally center the buttons */
+    gap: 20px; /* Space between the buttons */
+    margin-top: 20px;
+    width: 100%; /* Ensure it takes up full width */
+    justify-content: space-around; /* Evenly distribute the buttons */
+}
+
+/* Button styling (Box-like) */
+button {
+    font-size: 1.2rem;
+    padding: 25px 40px;
+    margin: 10px;
+    border: 2px solid #8e9aaf; /* Add border to create box-like effect */
+    border-radius: 12px; /* Rounded corners */
+    background-color: #ffffff; /* White background */
+    color: #8e9aaf; /* Neutral text color */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    width: 250px; /* Set fixed width for uniformity */
+}
+
+/* Button hover effect (Box-like) */
+button:hover {
+    background-color: #8e9aaf; /* Change background color to match border */
+    color: white; /* Change text color to white when hovered */
+}
+
+/* Specific button styles for Submit and Browse */
+.submit-button {
+    border-color: #8e9aaf;
+}
+
+.browse-button {
+    border-color: #8e9aaf;
+}
+
+/* Styles for the input fields and message box */
+.input-name,
+.input-message {
+    width: 80%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    background-color: #f9f9f9; /* Light grey background */
+}
+
+.input-name:focus,
+.input-message:focus {
+    outline: none;
+    border-color: #8e9aaf;
+}
+
+/* Message submission box */
+.entry {
+    background-color: #f0f0f0; /* Light grey for the message box */
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow for the box */
+    text-align: left;
+    font-size: 1rem;
+}
+
+.entry p {
+    margin: 5px 0;
+}
+
+.entry small {
+    color: #666666;
+    font-size: 0.8rem;
+}
+
+/* Back and Go Back buttons */
+.go-back,
+.back-button {
+    background-color: #f1f1f1; /* Light neutral color for background */
+    color: #333333; /* Dark text */
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.go-back:hover,
+.back-button:hover {
+    background-color: #e1e1e1; /* Slightly darker on hover */
+}
+
+/* Footer styling */
+footer {
+    margin-top: 30px;
+    font-size: 0.8rem;
+    color: #888888;
+}
