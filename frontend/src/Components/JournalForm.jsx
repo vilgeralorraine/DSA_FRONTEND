@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 function JournalForm() {
     const [name, setNewName] = useState(""); 
-    const [entries, setMessage] = useState([]); 
+    const [entries, setMessage] = useState(""); 
     const [entry, setEntry] = useState(""); 
     const [frontPage, setFrontPage] = useState("first");
 
