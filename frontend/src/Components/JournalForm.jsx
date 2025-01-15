@@ -29,6 +29,28 @@ function JournalForm() {
             setEntry("");
             setFrontPage("first");
         } 
+        try {
+            const response = await fetch("https://vilgeraapi.azurewebsites.net/submit", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(newEntry),
+            });
+
+            if (response.ok) {
+                const result = await response.json();
+                alert("message submitted!");
+                console.log("API Response:", result);
+                console.log("message submission successful");
+            } else {
+                alert("message submission failed");
+                console.error("API Error:", response.statusText);
+            }
+        } catch (error) {
+            alert("An error occured while submitting the message");
+            console.error("error:", error);
+        }
     }
     return (
         <div className="title">
