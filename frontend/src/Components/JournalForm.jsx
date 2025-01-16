@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 function JournalForm() {
     const [name, setNewName] = useState(""); 
     const [entries, setMessage] = useState([]); 
-    const [entry, setEntry] = useState(""); 
+    const [message, setEntry] = useState(""); //
     const [frontPage, setFrontPage] = useState("first");
 
     function handleBrowse() {
@@ -22,8 +22,8 @@ function JournalForm() {
     }
     async function handleSubmit(event) {
         event.preventDefault(); 
-        const newEntry = { name, text: entry, date: new Date().toLocaleString() };
-        if (name && entry) { 
+        const newEntry = { name, text: message, date: new Date().toLocaleString() };//
+        if (name && message) { //
             setMessage([...entries, newEntry]); 
             setNewName(""); 
             setEntry("");
@@ -76,7 +76,7 @@ function JournalForm() {
                         type="text"
                         id="message"
                         placeholder="Enter your message"
-                        value={entry}
+                        value={message}//
                         onChange={handleEntry}
                     /><br/>
                     <button className="submit-button" onClick={handleSubmit}>Submit</button>{/*submitting ur messages*/}
@@ -87,11 +87,11 @@ function JournalForm() {
                 <div>
                 <h1>Messages</h1> 
                 {entries.length > 0 ? ( 
-                    entries.map((entry, index) => ( 
+                    entries.map((message, index) => ( //
                         <div key={index} className="entry"> 
-                            <p>Name:{entry.name}</p> 
-                            <p>Message:{entry.text}</p>
-                            <p><small>Date:{entry.date}</small></p>
+                            <p>Name:{message.name}</p> //
+                            <p>Message:{message.text}</p>//
+                            <p><small>Date:{message.date}</small></p>//
                         </div>
                     ))
                 ) : (
