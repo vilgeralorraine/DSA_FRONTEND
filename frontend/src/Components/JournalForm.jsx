@@ -30,7 +30,7 @@ function JournalForm() {
             setFrontPage("first");
         };
         try {
-            const response = await fetch("https://vilgeraapi.azurewebsites.net/submit", {
+            const response = await fetch("https://vilgeraapi.azurewebsites.net", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
