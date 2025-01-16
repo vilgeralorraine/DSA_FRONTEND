@@ -1,5 +1,5 @@
 import React from "react";
-import JournalForm from "./Components/JournalForm";
+import JournalForm from "./Components/JournalForm.jsx";
 
 function App(){
   return(
