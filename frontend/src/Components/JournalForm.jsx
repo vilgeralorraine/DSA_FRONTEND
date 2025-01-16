@@ -23,7 +23,7 @@ function JournalForm() {
     async function handleSubmit(event) {
         event.preventDefault(); 
         const newEntry = { name, message, date: new Date().toLocaleString() };//
-        if (name && message) { //
+        if (name && message) { 
             setMessage([...entries, newEntry]); 
             setNewName(""); 
             setEntry("");
@@ -76,7 +76,7 @@ function JournalForm() {
                         type="text"
                         id="message"
                         placeholder="Enter your message"
-                        value={message}//
+                        value={message}
                         onChange={handleEntry}
                     /><br/>
                     <button className="submit-button" onClick={handleSubmit}>Submit</button>{/*submitting ur messages*/}
@@ -90,7 +90,7 @@ function JournalForm() {
                     entries.map((message, index) => ( 
                         <div key={index} className="entry"> 
                             <p>Name:{message.name}</p> 
-                            <p>Message:{message.text}</p>
+                            <p>Message:{message.message}</p>
                             <p><small>Date:{message.date}</small></p>
                         </div>
                     ))
