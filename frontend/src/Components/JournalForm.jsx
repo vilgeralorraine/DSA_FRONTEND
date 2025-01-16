@@ -87,11 +87,11 @@ function JournalForm() {
                 <div>
                 <h1>Messages</h1> 
                 {entries.length > 0 ? ( 
-                    entries.map((message, index) => ( //
+                    entries.map((message, index) => ( 
                         <div key={index} className="entry"> 
-                            <p>Name:{message.name}</p> //
-                            <p>Message:{message.text}</p>//
-                            <p><small>Date:{message.date}</small></p>//
+                            <p>Name:{message.name}</p> 
+                            <p>Message:{message.text}</p>
+                            <p><small>Date:{message.date}</small></p>
                         </div>
                     ))
                 ) : (
