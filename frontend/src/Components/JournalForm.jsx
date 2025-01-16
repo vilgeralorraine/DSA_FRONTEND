@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 function JournalForm() {
     const [name, setNewName] = useState(""); 
-    const [entries, setMessage] = useState(""); 
+    const [entries, setMessage] = useState([]); 
     const [entry, setEntry] = useState(""); 
     const [frontPage, setFrontPage] = useState("first");
 
@@ -28,9 +28,9 @@ function JournalForm() {
             setNewName(""); 
             setEntry("");
             setFrontPage("first");
-        } 
+        };
         try {
-            const response = await fetch("https://vilgeraapi.azurewebsites.net/submit", {
+            const response = await fetch("https://vilgeraapi.azurewebsites.net", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
