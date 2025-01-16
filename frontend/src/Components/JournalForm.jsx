@@ -45,7 +45,7 @@ function JournalForm() {
                 console.log("message submission successful");
             } else {
                 alert("message submission failed");
-                console.error("API Error:", response.statusText);
+                console.error(`API Error:, ${response.statusText}`);
             }
         } catch (error) {
             alert("An error occured while submitting the message");
