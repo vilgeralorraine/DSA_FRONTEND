@@ -23,12 +23,12 @@ function JournalForm() {
     async function handleSubmit(event) {
         event.preventDefault(); 
         const newEntry = { name, text: message, date: new Date().toLocaleString() };//
-        if (name && message) { //
-            setMessage([...entries, newEntry]); 
-            setNewName(""); 
-            setEntry("");
+        // if (name && message) { //
+        //     setMessage([...entries, newEntry]); 
+        //     setNewName(""); 
+        //     setEntry("");
             setFrontPage("first");
-        };
+        // };
         try {
             const response = await fetch("https://vilgeraapi.azurewebsites.net/submit", {
                 method: "POST",
