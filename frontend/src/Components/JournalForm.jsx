@@ -25,8 +25,8 @@ function JournalForm() {
         const newEntry = { name, message, date: new Date().toLocaleString() };//
         if (name && message) { 
             setEntries([...entries, newEntry]); 
-            setNewName(""); 
-            setMessage("");
+            // setNewName(""); 
+            // setMessage("");
             setFrontPage("first");
         };
         try {
