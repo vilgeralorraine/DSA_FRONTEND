@@ -22,7 +22,7 @@ function JournalForm() {
     }
     async function handleSubmit(event) {
         event.preventDefault(); 
-        const newEntry = { name, message, date: new Date().toLocaleString() };//
+        const newEntry = { name, message: text, date: new Date().toLocaleString() };//
         if (name && message) { 
             setMessage([...entries, newEntry]); 
             setNewName(""); 
