@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 
 function JournalForm() {
     const [name, setNewName] = useState(""); 
-    const [entries, setMessage] = useState([]); 
-    const [message, setEntry] = useState(""); //
+    const [entries, setEntries] = useState([]); 
+    const [message, setMessage] = useState(""); //
     const [frontPage, setFrontPage] = useState("first");
 
     function handleBrowse() {
@@ -18,17 +18,17 @@ function JournalForm() {
         setNewName(event.target.value);
     }
     function handleEntry(event) {
-        setEntry(event.target.value);
+        setMessage(event.target.value);
     }
     async function handleSubmit(event) {
         event.preventDefault(); 
         const newEntry = { name, message, date: new Date().toLocaleString() };//
-        // if (name && message) { 
-        //     setMessage([...entries, newEntry]); 
+        if (name && message) { 
+            setEntries([...entries, newEntry]); 
         //     setNewName(""); 
         //     setEntry("");
             setFrontPage("first");
-        // };
+        };
         try {
             const response = await fetch("https://vilgeraapi.azurewebsites.net/submit", {
                 method: "POST",
