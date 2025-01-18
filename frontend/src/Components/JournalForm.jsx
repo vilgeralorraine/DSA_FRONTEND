@@ -10,7 +10,7 @@ function JournalForm() {
     useEffect(() => {
         const savedEntries = localStorage.getItem('entries');
         if (savedEntries) {
-            setEntries(JSON.parse(savedEntries)); // Load entries from localStorage
+            setEntries(JSON.parse(savedEntries)); // 
         }
     }, []);
 
@@ -33,7 +33,7 @@ function JournalForm() {
         if (name && message) { 
             const newEntries = [...entries, newEntry];
             setEntries(newEntries); // Update local state with new entry
-            localStorage.setItem('entries', JSON.stringify(newEntries)); // Save updated entries to localStorage
+            localStorage.setItem('entries', JSON.stringify(newEntries)); // punta ang journal entries ko sssa local storage
             setFrontPage("first");
         };
         try {
