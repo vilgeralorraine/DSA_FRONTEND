@@ -31,8 +31,8 @@ function JournalForm() {
         event.preventDefault(); 
         const newEntry = { name, message, date: new Date().toLocaleString() };//
         if (name && message) { 
-            const newEntries = [...entries, newEntry];
-            setEntries(newEntries); // Update local state with new entry
+            const newEntries = [...entries, newEntry]; // will have updated list of entries kasasma ang mga bagong entries
+            setEntries(newEntries); // Update the state with new entries
             localStorage.setItem('entries', JSON.stringify(newEntries)); // punta ang journal entries ko sssa local storage
             setFrontPage("first");
         };
@@ -90,12 +90,12 @@ function JournalForm() {
                     <button className="go-back" onClick={() => setFrontPage("first")}>Go Back</button>{/*go back 2 da frontpage*/}
                 </div>
             )}
-            {frontPage === "browse" && ( 
+            {/*conditional check*/}{frontPage === "browse" && ( 
                 <div>
                 <h1>Messages</h1> 
                 {entries.length > 0 ? ( 
                     entries.map((message, index) => ( 
-                        <div key={index} className="entry"> 
+                        <div key={index} className="entry"> {/* iterates or loop through yung msg entries */}
                             <p>Name:{message.name}</p> 
                             <p>Message:{message.message}</p>
                             <p><small>Date:{message.date}</small></p>
