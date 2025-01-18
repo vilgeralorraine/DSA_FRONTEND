@@ -31,9 +31,9 @@ function JournalForm() {
         event.preventDefault(); 
         const newEntry = { name, message, date: new Date().toLocaleString() };//
         if (name && message) { 
-            const updatedEntries = [...entries, newEntry];
-            setEntries(updatedEntries); // Update local state with new entry
-            localStorage.setItem('entries', JSON.stringify(updatedEntries)); // Save updated entries to localStorage
+            const newEntries = [...entries, newEntry];
+            setEntries(newEntries); // Update local state with new entry
+            localStorage.setItem('entries', JSON.stringify(newEntries)); // Save updated entries to localStorage
             setFrontPage("first");
         };
         try {
