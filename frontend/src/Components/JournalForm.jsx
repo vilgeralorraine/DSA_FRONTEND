@@ -87,7 +87,7 @@ function JournalForm() {
                         onChange={handleEntry}
                     /><br/>
                     <button className="submit-button" onClick={handleSubmit}>Submit</button>{/*submitting ur messages*/}
-                    <button className="go-back" onClick={() => setFrontPage("first")}>Go Back</button>{/*go back 2 da frontpage*/}
+                    <button className="go-back" onClick={() => setFrontPage("first")}>Go Back</button>{/*HERE go back 2 da frontpage*/}
                 </div>
             )}
             {/*conditional check*/}{frontPage === "browse" && ( 
