@@ -1,11 +1,18 @@
 import "./JournalForm.css";
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 function JournalForm() {
     const [name, setNewName] = useState(""); 
     const [entries, setEntries] = useState([]); 
     const [message, setMessage] = useState(""); //
     const [frontPage, setFrontPage] = useState("first");
+
+    useEffect(() => {
+        const savedEntries = localStorage.getItem('entries');
+        if (savedEntries) {
+            setEntries(JSON.parse(savedEntries)); // Load entries from localStorage
+        }
+    }, []);
 
     function handleBrowse() {
         setFrontPage("browse");{/*for browse button*/}
@@ -24,9 +31,9 @@ function JournalForm() {
         event.preventDefault(); 
         const newEntry = { name, message, date: new Date().toLocaleString() };//
         if (name && message) { 
-            setEntries([...entries, newEntry]); 
-            // setNewName(""); 
-            // setMessage("");
+            const updatedEntries = [...entries, newEntry];
+            setEntries(updatedEntries); // Update local state with new entry
+            localStorage.setItem('entries', JSON.stringify(updatedEntries)); // Save updated entries to localStorage
             setFrontPage("first");
         };
         try {
